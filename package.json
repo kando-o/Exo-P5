@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+	"type": "module",
   "scripts": {
     "start": "http-server -p 8080 -d",
+		"start-node": "node index.js",
     "test": "cypress open"
   },
   "author": "",
