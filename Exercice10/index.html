@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Exercice 10</title>
+  <meta charset="UTF-8">
+  <title>Exercice 10</title>
 </head>
 <body>
-    <h1>Mon premier Site Web</h1>
-    <p>Bienvenue sur mon site web !</p>
+  <h1>Mon premier Site Web</h1>
+  <p>Bienvenue sur mon site web !</p>
+
+  <!-- Champ de saisie + bouton -->
+  <input type="number" id="numberInput" placeholder="Entrez un nombre">
+  <button id="runBtn">Afficher les nombres</button>
+
+  <!-- Résultat -->
+  <p id="result"></p>
+
+  <!-- Script en module -->
+  <script type="module">
+    // import de la fonction exportée
+    import printNumbers from './index.js';
+
+    const input = document.getElementById('numberInput');
+    const btn = document.getElementById('runBtn');
+    const result = document.getElementById('result');
+
+    btn.addEventListener('click', () => {
+      const n = parseInt(input.value, 10);
+      if (!isNaN(n) && n > 0) {
+        result.textContent = printNumbers(n);
+      } else {
+        result.textContent = "Veuillez entrer un nombre valide.";
+      }
+    });
+  </script>
 </body>
 </html>
