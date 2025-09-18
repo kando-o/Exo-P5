@@ -1,9 +1,8 @@
 ul {
   color: #0000ff;
-  padding: 10px;
 }
 
 li {
-  list-style-type: none;
-  margin: 15px;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */

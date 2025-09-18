@@ -1,18 +1,10 @@
 // votre code ici
 
-function checkAge(age) {
-  if (age < 18) {
-    return "Vous êtes mineur.";
-  } else if (age <= 65) {
-    return "Vous êtes majeur.";
-  } else {
-    return "Vous êtes senior.";
-  }
-}
+const checkAge = age => `Vous êtes ${age < 18 ? "mineur" : age < 65 ? "majeur" : "senior"}.`;
 
 console.log(checkAge(15)); // "Vous êtes mineur."
 console.log(checkAge(30)); // "Vous êtes majeur."
 console.log(checkAge(75)); // "Vous êtes senior."
 
-// export default checkAge;
+export default checkAge;
 
